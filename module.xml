@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache"
+        version="25">
+	<Document name="kozo.ZPM">
+		<Module>
+			<Name>kozo</Name>
+			<Version>0.1.0</Version>
+			<Description>kozo Page Maker</Description>
+			<Keywords>Document Page Report Maker</Keywords>
+			<Packaging>module</Packaging>
+			<CSPApplication CookiePath="/kozo/"
+			                DefaultTimeout="900"
+			                DeployPath="${cspdir}kozo\src\csp\"
+			                InboundWebServicesEnabled="0"
+			                PasswordAuthEnabled="1"
+			                Recurse="1"
+			                ServeFiles="1"
+			                ServeFilesTimeout="3600"
+			                SourcePath="/src/csp"
+			                UnauthenticatedEnabled="0"
+			                Url="/kozo"
+			                UseSessionCookie="2"/>
+			<Resource Name="kozo.PKG" />
+			<SourcesRoot>src</SourcesRoot>
+		</Module>
+	</Document>
+</Export>

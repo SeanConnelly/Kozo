@@ -1,0 +1,126 @@
+h2 {
+    display: block;
+    page-break-before: always;
+    position: relative;
+}
+
+@media print {
+
+    .preview-content-inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .debug-panel {
+        display: none;
+    }
+
+}
+
+@media screen {
+
+    body {
+        background-image: url("textured_paper.png");
+        background-repeat: repeat;
+        overflow: hidden;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .monaco-editor {
+        padding-top: 1em;
+    }
+
+    .editor {
+        position: absolute;
+        left: 0.75em;
+        top: 0;
+        bottom: 0;
+        width: 44%;
+        box-shadow: 0 0 0.3em 0.3em #aaa;
+    }
+
+    .editor-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 2.5em;
+        right: 0;
+        background-color: #fff;
+    }
+
+    .editor-bar div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .editor-content {
+        position: absolute;
+        left: 0;
+        top: 2.5em;
+        bottom: 0;
+        right: 0;
+        overflow:hidden;
+    }
+
+    .preview {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 54.5%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .preview-content {
+        width: 21cm;
+        margin: 1em auto;
+        box-shadow: 0 0 1em 0.4em #999;
+        background-color: #fff;
+        opacity: 0.95;
+    }
+
+    .preview-content-inner {
+        padding: 1cm;
+    }
+
+    button {
+        border: 1px solid #e8e8e8;
+        padding: 0 0.5em 0.25em 0.5em ;
+        border-radius: .25rem;
+        cursor: pointer;
+        align-items: center;
+        line-height: 1em;
+    }
+
+    button:hover {
+        border: 1px solid #d8d8d8;
+        box-shadow: 0 0 0.05em #888;
+    }
+
+    .panel-title {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 1em;
+        font-weight: bold;
+        z-index: 10;
+    }
+
+    .debug-panel, .debug-panel pre  {
+        position: relative;
+        padding: 1em;
+        background-color: hsl(181,50%,80%) !important;
+    }
+
+    .error-panel, .error-panel pre {
+        position: relative;
+        padding: 1em;
+        background-color: hsl(21,50%,80%) !important;
+    }
+
+}
+
