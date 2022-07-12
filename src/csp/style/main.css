@@ -1,17 +1,14 @@
-h2 {
-    display: block;
-    page-break-before: always;
-    position: relative;
-}
 
 @media print {
 
-    .preview-content-inner {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
+    h1, section > h2:first-child
+    {
+        page-break-before: right;
+        break-before: recto;
+    }
+
+    .editor {
+        display: none;
     }
 
     .debug-panel {

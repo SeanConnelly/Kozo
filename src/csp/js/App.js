@@ -168,8 +168,11 @@ export class App {
     }
 
     runMermaid(section,chainReaction) {
+        console.log(this.data);
+        let content = mustache(section.content,this.data)
+        console.log(content);
         let html = `<div class="mermaid">
-                        ${section.content}
+                        ${content}
                     </div>`
         this.renderHTML(section,html);
         Mermaid.init();
@@ -240,7 +243,7 @@ export class App {
         if (sectionEl === null) {
             sectionEl = document.createElement('section');
             sectionEl.id = 'section-' + id
-            //sectionEl.style.pageBreakBefore = 'always';
+            sectionEl.classList.add('page-break');
             this.previewContentEl.appendChild(sectionEl)
         }
         sectionEl.innerHTML = html;
