@@ -20,7 +20,7 @@
 			                UnauthenticatedEnabled="0"
 			                Url="/kozo"
 			                UseSessionCookie="2"/>
-			<Resource Name="kozo.PKG" />
+			<Resource Name="Kozo.PKG" />
 			<SourcesRoot>src</SourcesRoot>
 		</Module>
 	</Document>
