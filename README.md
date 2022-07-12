@@ -1,5 +1,7 @@
 # Kozo
 
+![image](./src/csp/images/screenshot-0.png)
+
 Kozo is a live edit solution for producing
 
 * Technical Documents
@@ -26,10 +28,6 @@ Kozo can be used for many purposes and different levels of experience. Its aim i
 producing data rich web pages and documents for all levels of developers and data scientists.
 
 A primary driver for Kozo is the automatic production of technical documentation that is baked directly into IRIS projects.
-
-The following screenshot provide view of documents being developed using the Kozo web application.
-
-![image](./src/csp/images/screenshot-0.png)
 
 ![image](./src/csp/images/screenshot-1.png)
 
