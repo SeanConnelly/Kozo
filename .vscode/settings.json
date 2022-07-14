@@ -3,10 +3,21 @@
         "Dockerfile*": "dockerfile"
     },
     "objectscript.conn" :{
-        "active": false
+        "ns": "USER",
+        "active": true,
+        "docker-compose": {
+            "service": "iris",
+            "internalPort": 52773
+        },
+        "password": "SYS",
+        "username": "_SYSTEM",
+        "links": {
+            "Samples.KitchenSink": "http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.KitchenSink.cls",
+            "Samples.ExploringTemperatureData": "http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.ExploringTemperatureData.cls"
+        }
     },
     "objectscript.export": {	
-      "folder": "src",
+      "folder": "iris",
       "addCategory": true,
       "atelier": true,
       "generated": false,
