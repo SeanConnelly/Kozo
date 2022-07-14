@@ -17,7 +17,7 @@ export class App {
         this.data = {};
         this.busy = false;  //used to debounce server actions and reduce IO activity
         this.id = 0;
-        this.ns = 'IWS'  //TODO, remove this hardcoding !!
+        this.ns = 'USER'  //TODO, remove this hardcoding !!
         this.nextSectionToRender = 0;
         this.sections = [];
         this.queryBusy = false;

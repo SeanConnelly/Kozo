@@ -1,0 +1,30 @@
+{
+    "files.associations": {
+        "Dockerfile*": "dockerfile"
+    },
+    "objectscript.conn" :{
+        "ns": "USER",
+        "active": true,
+        "docker-compose": {
+            "service": "iris",
+            "internalPort": 52773
+        },
+        "password": "SYS",
+        "username": "_SYSTEM",
+        "links": {
+            "Samples.KitchenSink": "http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.KitchenSink.cls",
+            "Samples.ExploringTemperatureData": "http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.ExploringTemperatureData.cls"
+        }
+    },
+    "objectscript.export": {	
+      "folder": "src",
+      "addCategory": true,
+      "atelier": true,
+      "generated": false,
+      "filter": "",
+      "category": "*",
+      "noStorage": false,
+      "dontExportIfNoChanges": false,
+      "maxConcurrentConnections": 0
+  }
+}
