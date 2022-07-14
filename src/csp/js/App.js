@@ -102,6 +102,7 @@ export class App {
         if (section.type.toUpperCase() === 'FORM') return this.runForm(section,chainReaction)
         if (section.type.toUpperCase() === 'CODE') return this.renderCode(section,chainReaction)
         if (section.type.toUpperCase() === 'BREAK') return this.renderPageBreak(section,chainReaction)
+        if (section.type.toUpperCase() === 'HTML') return this.runHTML(section,chainReaction)
         this.renderErrorPanel(section,`Unknown content type: ${section.type}`)
     }
 
@@ -112,6 +113,11 @@ export class App {
 
     renderCode(section,chainReaction) {
         this.drawMoustacheMarkdownSection(section.id,'```' + section.content + '```',chainReaction);
+    }
+
+    runHTML(section,chainReaction) {
+        this.renderSectionElement(section.id,mustache(section.content,this.data));
+        if (chainReaction) this.renderNextSection(chainReaction);
     }
 
     renderPageBreak(section,chainReaction) {
@@ -146,36 +152,41 @@ export class App {
         if (content.indexOf('#parent') > -1) {
             content = content.replace('#parent',`#section-${section.id}`)
         }
-        //try {
+        try {
             let html = new Function("data",content)(this.data);
             if (html !== undefined) this.renderHTML(section,html);
             if (chainReaction) this.renderNextSection(chainReaction);
-        //} catch(err) {
-        //    let errorInfo = `<pre>${err.toString()}</pre>`;
-        //    this.renderErrorPanel(section,errorInfo)
-        //}
+        } catch(err) {
+            let errorInfo = `<pre>${err.toString()}</pre>`;
+            this.renderErrorPanel(section,errorInfo)
+        }
     }
 
     runChartJS(section,chainReaction) {
-        let html=`<div><canvas id="chart-${section.id}" width="400" height="400"></canvas></div>`
+        let html=`<div><canvas id="chart-${section.id}" width="${section.params.width || 600}" height="${section.params.height || 600}" style="margin: 0 auto"></canvas></div>`
         this.renderHTML(section,html);
         const ctx = document.getElementById(`chart-${section.id}`).getContext('2d');
         let chartData = Function("data",`return ${section.content}`)(this.data);
-        console.log('CHART DATA');
-        console.log(chartData);
         new Chart(ctx,chartData);
         if (chainReaction) this.renderNextSection(chainReaction);
+
     }
 
     runMermaid(section,chainReaction) {
-        console.log(this.data);
         let content = mustache(section.content,this.data)
-        console.log(content);
-        let html = `<div class="mermaid">
+        let html = `<div class="mermaid" style="text-align:center">
                         ${content}
                     </div>`
         this.renderHTML(section,html);
         Mermaid.init();
+        if (section.params.scale) {
+            window.setTimeout( () => {
+                let sectionEl = document.getElementById('section-' + section.id);
+                let svg = sectionEl.firstElementChild.firstElementChild;
+                let height = svg.getAttribute("height");
+                svg.setAttribute("height", `${parseInt(height)*section.params.scale}px`);
+            },1)
+        }
         if (chainReaction) this.renderNextSection(chainReaction);
     }
 
