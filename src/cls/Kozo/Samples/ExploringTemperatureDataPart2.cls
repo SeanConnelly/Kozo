@@ -13,7 +13,7 @@ After spending some time exploring the graphs the trend of constant upwards chan
 
 If this is indeed accurate then the earth is warming up much faster than I had perceived from mainstream news. Perhaps I have taken the doomsday predictions with a little too much salt. If temperatures are rising as quickly as these graphs suggest then future generations really are going to rely on the decisions we make today.
 
-My immediate question is are there resources like this out there that everyday people can interact with?
+My immediate question is are there resources like this out there that everyday people can interact with? If so, they need to be made more visible.
 
 ## Select City & Country
 
