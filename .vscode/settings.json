@@ -17,7 +17,7 @@
         }
     },
     "objectscript.export": {	
-      "folder": "iris",
+      "folder": "src",
       "addCategory": true,
       "atelier": true,
       "generated": false,
