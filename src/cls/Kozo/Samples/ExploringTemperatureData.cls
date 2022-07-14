@@ -62,12 +62,21 @@ decade so I narrow the SQL query down to unclude just these.
 
 ## Temperature Counts By Year
 
-| Year | Total |
-|------|-------| 
-{{#yearcounts}} | {{LogYear}} | {{Total}} |
-{{/yearcounts}}
-
+```HTML
+<table class="compact">
+    <tr>
+        <th>Log Year</th>
+        <th>Total</th>
+    </tr>
+    {{#yearcounts}}
+    <tr>
+        <td>{{LogYear}}</td>
+        <td>{{Total}}</td>
+    </tr>
+    {{/yearcounts}} 
+</table>
 ```
+
 
 It looks as if there is a consistant 42,000 temperature readings per year for the past 170 years.
 The number of readings then starts to tail off from the mid 1800's to the first records that started
@@ -111,7 +120,7 @@ data.LondonMinMax18.map( mm => {
 })
 ```
 
-```chartjs
+```chartjs {"height":400,"width":600}
 {
     type: 'line',
     data: {
@@ -161,7 +170,7 @@ data.LondonMinMax19.map( mm => {
 })
 ```
 
-```chartjs
+```chartjs {"height":400,"width":600}
 {
     type: 'line',
     data: {
@@ -209,7 +218,7 @@ data.LondonMinMax20.map( mm => {
 })
 ```
 
-```chartjs
+```chartjs {"height":400,"width":600}
 {
     type: 'line',
     data: {
@@ -257,7 +266,7 @@ data.LondonMinMax21.map( mm => {
 })
 ```
 
-```chartjs
+```chartjs {"height":400,"width":600}
 {
     type: 'line',
     data: {
@@ -289,7 +298,7 @@ data.LondonMinMax21.map( mm => {
 
 I decided to overlay the decades to see how they compare. It was getting a little noisy so I just included the last three.
 
-```chartjs
+```chartjs {"height":400,"width":600}
 {
     type: 'line',
     data: {
@@ -359,7 +368,7 @@ It was still a little noisy so I just included the average temperature for each 
 
 One thing that immediatly stands out is that the 21st century is a step change different to the previous centuries.
 
-```chartjs
+```chartjs {"height":400,"width":600}
 {
     type: 'line',
     data: {
@@ -463,7 +472,6 @@ data.ChristchurchMinMax21.map( mm => {
     data.ChristchurchMax21.push(mm.MaxAverage);
     data.ChristchurchAvr21.push(mm.AvrAvr);    
 })
-console.log('!!',data);
 ```
 
 ## Christchurch - Monthly Average Temperatures by Century
@@ -473,7 +481,7 @@ What happens if I select the otherside of the world, Christchurch is probably a 
 It's interesting seing the inverse profile to London. The data is lacking 18th century which makes sense. Again, there is
 a distinctive step change between the centuries in terms of an increase in temperature.
 
-```chartjs
+```chartjs {"height":400,"width":600}
 {
     type: 'line',
     data: {
@@ -506,7 +514,7 @@ a distinctive step change between the centuries in terms of an increase in tempe
 I decided to include the min and max as well. Interestingly the 21st century is higher on average, but the 20th century had 
 higher max values. 
 
-```chartjs
+```chartjs {"height":400,"width":600}
 {
     type: 'line',
     data: {
@@ -570,6 +578,7 @@ higher max values.
 } 
 ```
 
+<br><br>
 It seems like there is a common trend here, but I do want to see more cities first.
 
 In the next part I will make an interactive document that will allow the reader to select country and city from

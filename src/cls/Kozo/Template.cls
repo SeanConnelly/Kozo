@@ -8,5 +8,10 @@ XData RawContent
 	]]></content>
 }
 
+ClassMethod Call(pBlockID As %Integer, ByRef data As %DynamicObject)
+{
+	///CALL-CODE-PLACE-HOLDER///
+}
+
 }
 

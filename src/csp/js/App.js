@@ -17,7 +17,7 @@ export class App {
         this.data = {};
         this.busy = false;  //used to debounce server actions and reduce IO activity
         this.id = 0;
-        this.ns = 'USER'  //TODO, remove this hardcoding !!
+        this.ns = new URLSearchParams(window.location.search).get('ns');
         this.nextSectionToRender = 0;
         this.sections = [];
         this.queryBusy = false;
@@ -205,7 +205,7 @@ export class App {
                     }
                 })
             }
-            this.renderInlineSQLDebugPanel(section, 'Running Query')
+            //this.renderInlineSQLDebugPanel(section, 'Running Query')
             System.Query(this.ns, section.content, params).then(data => {
                 this.queryBusy = false;
                 this.data[section.params.name] = data.result.content;
@@ -220,7 +220,6 @@ export class App {
                     this.clearPanel(section);
                 }
                 this.renderNextSection(true);
-                console.log(this.data)
             })
         },500)
     }
