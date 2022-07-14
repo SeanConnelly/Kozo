@@ -29,6 +29,11 @@ producing data rich web pages and documents for all levels of developers and dat
 
 A primary driver for Kozo is the automatic production of technical documentation that is baked directly into IRIS projects.
 
+### Samples
+Kitchen Sink: [http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.KitchenSink.cls](http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.KitchenSink.cls)
+ExploringTemperatureData: [http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.ExploringTemperatureData.cls](http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.ExploringTemperatureData.cls)
+
+### Screenshots
 ![image](./src/csp/images/screenshot-1.png)
 
 ![image](./src/csp/images/screenshot-2.png)
