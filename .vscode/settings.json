@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "Dockerfile*": "dockerfile"
+    },
+    "objectscript.conn" :{
+        "active": false
+    },
+    "objectscript.export": {	
+      "folder": "src",
+      "addCategory": true,
+      "atelier": true,
+      "generated": false,
+      "filter": "",
+      "category": "*",
+      "noStorage": false,
+      "dontExportIfNoChanges": false,
+      "maxConcurrentConnections": 0
+  }
+}
