@@ -325,28 +325,33 @@ Use a template to display the tasks
 
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
 
-```SQL {"name":"Customers","debug":0}
-SELECT ContactName, Address, City, CompanyName
-FROM Northwind.Customers
-ORDER BY City desc
+```SQL {"name":"Persons","debug":0}
+SELECT top 100 ID, City, Name, State, Street, Title, Zip
+FROM Kozo_Samples.Person
 ```
 
 ```HTML
 <table class="compact">
     <tr>
-        <th>Contact Name</th>
-        <th>Address</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Name</th>
+        <th>Street</th>
         <th>City</th>
-        <th>Company Name</th>
+        <th>State</th>
+        <th>Street</th>                        
     </tr>
-    {{#Customers}}
+    {{#Person}}
     <tr>
-        <td>{{ContactName}}</td>
-        <td>{{Address}}</td>
+        <td>{{ID}}</td>
+        <td>{{Title}}</td>        
+        <td>{{Name}}</td>                
+        <td>{{Street}}</td>
         <td>{{City}}</td>
-        <td>{{CompanyName}}</td>
+        <td>{{State}}</td>
+        <td>{{Zip}}</td>        
     </tr>
-    {{/Customers}} 
+    {{/Persons}} 
 </table>
 ```]]></content>
 }
