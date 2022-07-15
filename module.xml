@@ -4,7 +4,7 @@
 	<Document name="kozo.ZPM">
 		<Module>
 			<Name>kozo</Name>
-			<Version>0.1.0</Version>
+			<Version>0.1.2</Version>
 			<Description>kozo Page Maker</Description>
 			<Keywords>Document Page Report Maker</Keywords>
 			<Packaging>module</Packaging>
