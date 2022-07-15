@@ -60,7 +60,7 @@ do ##class(Kozo.Samples.Person).Populate(10000)
 
 https://github.com/SeanConnelly/EarthSurfaceTemperatureDataByCity
 
-Download or pull this repo to the required machine. The run the import method:-
+Download or pull this repo to the required machine. Then run the import method:-
 
 do ##class(Climate.TemperatureByCity).ImportFromGitHub("location of the data folder here")
 
