@@ -33,11 +33,11 @@ A primary driver for Kozo is the automatic production of technical documentation
 
 If you're running a local docker instance then the following links will open the samples directly
 
-Kitchen Sink: [http://localhost:42773/kozo/Kozo.Editor.cls?ns=USER&doc=Kozo.Samples.KitchenSink.cls](http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.KitchenSink.cls)
+Kitchen Sink: [http://localhost:42773/kozo/Kozo.Samples.ExploringTemperatureData.cls](http://localhost:42773/kozo/Kozo.Samples.ExploringTemperatureData.cls)
 
-Exploring Temperature Data Part 1: [http://localhost:42773/kozo/Kozo.Editor.cls?ns=USER&doc=Kozo.Samples.ExploringTemperatureData.cls](http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.ExploringTemperatureData.cls)
+Exploring Temperature Data Part 1: [http://localhost:42773/kozo/Kozo.Samples.ExploringTemperatureData.cls](http://localhost:42773/kozo/Kozo.Samples.ExploringTemperatureData.cls)
 
-Exploring Temperature Data Part 2: [http://localhost:42773/kozo/Kozo.Editor.cls?ns=USER&doc=Kozo.Samples.ExploringTemperatureDataPart2.cls](http://localhost:42773/kozo/Kozo.Editor.cls?doc=Kozo.Samples.ExploringTemperatureDataPart2.cls)
+Exploring Temperature Data Part 2: [http://localhost:42773/kozo/Kozo.Samples.ExploringTemperatureDataPart2.cls](http://localhost:42773/kozo/Kozo.Samples.ExploringTemperatureDataPart2.cls)
 
 ### Samples Exported to PDF
 [Kitchen Sink](./sample-documents/Kitchen%20Sink.pdf)
