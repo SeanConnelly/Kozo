@@ -21,6 +21,7 @@
 			                Url="/kozo"
 			                UseSessionCookie="2"/>
 			<Resource Name="Kozo.PKG" />
+			<Resource Name="Climate.PKG" />
 			<SourcesRoot>src</SourcesRoot>
 		</Module>
 	</Document>
