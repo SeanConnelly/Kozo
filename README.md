@@ -77,7 +77,7 @@ Instructions on how to build kozo pages are next on the projects todo list as we
 
 In the meantime, use studio to create a copy of the Kozo.Template class, naming the new class.
 
-With that new class open, hit F5 (or view web page) and the page will open directly in the editor.
+With that new class open in classic Studio, hit F5 (or view web page) and the page will open directly in the editor.
 
 The page will save automatically.
 
