@@ -60,7 +60,7 @@ do ##class(Kozo.Samples.Person).Populate(10000)
 
 https://github.com/SeanConnelly/EarthSurfaceTemperatureDataByCity
 
-Download or pull this repo to the required machine. The run the import method:-
+Download or pull this repo to the required machine. Then run the import method:-
 
 do ##class(Climate.TemperatureByCity).ImportFromGitHub("location of the data folder here")
 
@@ -77,7 +77,7 @@ Instructions on how to build kozo pages are next on the projects todo list as we
 
 In the meantime, use studio to create a copy of the Kozo.Template class, naming the new class.
 
-With that new class open, hit F5 (or view web page) and the page will open directly in the editor.
+With that new class open in classic Studio, hit F5 (or view web page) and the page will open directly in the editor.
 
 The page will save automatically.
 
@@ -87,6 +87,6 @@ The entire document is a markdown document, except that code fences are actually
 
 These code fences currently support SQL, JavaScript, Mermaid, ChartJS, HTML with more to come. Including being able to inline ObjectScript.
 
-The page has a "data" object which persists across the entire page. This data object can be accessed from any of the code fences as well via Moustache template.
+The page has a "data" object which persists across the entire page. This data object can be accessed from any of the code fences as well as via Moustache templates.
 
-For now the best way to see this in action is to view the Kitchen Sink demo.
+For now the best way to see this in action is to view the Kitchen Sink demo for examples.
