@@ -87,6 +87,6 @@ The entire document is a markdown document, except that code fences are actually
 
 These code fences currently support SQL, JavaScript, Mermaid, ChartJS, HTML with more to come. Including being able to inline ObjectScript.
 
-The page has a "data" object which persists across the entire page. This data object can be accessed from any of the code fences as well via Moustache template.
+The page has a "data" object which persists across the entire page. This data object can be accessed from any of the code fences as well as via Moustache templates.
 
-For now the best way to see this in action is to view the Kitchen Sink demo.
+For now the best way to see this in action is to view the Kitchen Sink demo for examples.
